@@ -16,7 +16,6 @@
     "babel-preset-flow": "1.0.0",
     "babel-register": "6.11.6",
     "flow-bin": "0.34.0",
-    "flow-copy-source": "1.1.0",
     "standard-flow": "1.0.0",
     "tape": "4.4.0"
   },
@@ -26,9 +25,9 @@
     "flow": "flow check",
     "lint": "standard-flow src/*.js",
     "start": "babel --watch --out-dir lib src",
-    "copy-types": "flow-copy-source -v src lib",
-    "build-node": "babel --out-dir lib src",
-    "build": "npm run build-node && npm run copy-types",
+    "build:types": "flow gen-flow-files src --out-dir lib",
+    "build:node": "babel --out-dir lib src",
+    "build": "npm run build:node && npm run build:types",
     "prepublish": "npm run build && npm test"
   },
   "repository": {
