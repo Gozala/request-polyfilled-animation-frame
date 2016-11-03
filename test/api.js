@@ -11,6 +11,8 @@ test('test baisc', test => {
           'exports requestPolyfilledAnimationFrame')
   test.ok(isFunction(API.cancelPolyfilledAnimationFrame),
           'exports cancelPolyfilledAnimationFrame')
+  test.ok(isFunction(API.now),
+          'exports now')
 
   test.end()
 })

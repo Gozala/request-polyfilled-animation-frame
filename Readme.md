@@ -13,6 +13,18 @@
 import {requestAnimationFrame, cancelAnimationFrame} from 'request-polyfilled-animation-frame'
 ```
 
+In addition package also exports it's internal polyfill implementations:
+
+```js
+import {requestPolyfilledAnimationFrame, cancelPolyfilledAnimationFrame} from 'request-polyfilled-animation-frame'
+```
+Library internally uses polyfill for `performance.now` and also exports it as `now` so that timing is consistent across all users.
+
+```js
+import {now} from 'request-polyfilled-animation-frame'
+```
+
+
 ## Install
 
     npm install request-polyfilled-animation-frame
@@ -25,3 +37,4 @@ import {requestAnimationFrame, cancelAnimationFrame} from 'request-polyfilled-an
 [downloads-url]: https://npmjs.org/package/request-polyfilled-animation-frame
 [standard-image]:https://img.shields.io/badge/code%20style-standard-brightgreen.svg
 [standard-url]:http://standardjs.com/
+[performance-now]:https://www.npmjs.com/package/performance-now
