@@ -1,10 +1,10 @@
 /* @flow */
 
-import * as API from "../"
-import test from "tape"
+import * as API from '../'
+import test from 'tape'
 
-test("test baisc", test => {
-  test.isEqual(typeof(API), "object")
+test('test baisc', test => {
+  test.isEqual(typeof API, 'object')
   test.ok(isFunction(API.requestAnimationFrame), 'exports requestAnimationFrame')
   test.ok(isFunction(API.cancelAnimationFrame), 'exports cancelAnimationFrame')
   test.ok(isFunction(API.requestPolyfilledAnimationFrame),
@@ -15,7 +15,6 @@ test("test baisc", test => {
   test.end()
 })
 
-
 const isFunction =
   value =>
-  typeof(value) === "function"
+  typeof value === 'function'

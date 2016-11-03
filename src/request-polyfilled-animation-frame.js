@@ -1,14 +1,18 @@
 /* @flow */
 
-let lastTime = 0
+import performance$now from 'performance-now'
 
 type Request = (timestamp:number) => void
 
+export const now:() => number = performance$now
+
+let lastTime = now()
+
 export const requestPolyfilledAnimationFrame =
   (callback:Request):number => {
-    const now = new Date().getTime()
-    const remaining = Math.max(0, 16 - (now - lastTime))
-    lastTime = now + remaining
+    const time = now()
+    const remaining = Math.max(0, 16 - (time - lastTime))
+    lastTime = time + remaining
     return setTimeout(callback, remaining, lastTime)
   }
 

@@ -38,5 +38,8 @@
   "bugs": {
     "url": "http://github.com/Gozala/request-polyfilled-animation-frame/issues/"
   },
-  "license": "MPL-2.0"
+  "license": "MPL-2.0",
+  "dependencies": {
+    "performance-now": "0.2.0"
+  }
 }
