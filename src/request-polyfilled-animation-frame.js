@@ -50,4 +50,4 @@ export const cancelAnimationFrame = typeof window === 'undefined'
   ? (id:number):void => window.webkitCancelRequestAnimationFrame(id)
   : typeof window.oCancelRequestAnimationFrame === 'function'
   ? (id:number):void => window.oCancelRequestAnimationFrame(id)
-  : requestPolyfilledAnimationFrame
+  : cancelPolyfilledAnimationFrame
